@@ -1,16 +1,17 @@
 import steamer from './food-steamer.png'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({cartAmount}) => {
+
     return (
         <div style={navBar}>
-            <h1 style={restaurantName}>Sunly Rest</h1>
+            <h1 style={restaurantName}>Dim Sum Sam</h1>
             <div style={navBarButtonContainer}>
                 <Link to="/" style={link}> <h2>Home</h2> </Link>
-                <h2>Shop</h2>
-                <Link to='/contact' style={link}> <h2>Contact</h2> </Link>
+                <Link to="/product" style={link}> <h2>Menu</h2> </Link>
+                <Link to="/contact" style={link}> <h2>Contact</h2> </Link>
                 <img style={shoppingCart} src={steamer} alt="shopping cart"></img>
-                <span style={cartAmount}>11</span>
+                <span style={cart}>{cartAmount}</span>
             </div>
         </div>
         
@@ -41,7 +42,7 @@ const shoppingCart = {
     width: '2rem'
 }
 
-const cartAmount = {
+const cart = {
     backgroundColor: 'red',
     position: 'absolute',
     right: '95px',

@@ -28,7 +28,7 @@ const homeTitle = {
 
 const homeButton = {
     position: 'absolute',
-    bottom: '220px',
+    bottom: '225px',
     left: '85px',
     height: '4rem',
     width: '12rem',
