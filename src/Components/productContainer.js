@@ -2,7 +2,7 @@ import './card.css'
 
 const ProductCard = ({itemName, itemPrice, itemImage, handleButtonClick}) => {
     return (
-        <div style={container} className="cardContainer">
+        <div style={container} className="Container">
             <img style={image} src={itemImage} alt=''/>
             <p style={name}>{itemName}</p>
             <p style={price}>{itemPrice}</p>
@@ -10,6 +10,30 @@ const ProductCard = ({itemName, itemPrice, itemImage, handleButtonClick}) => {
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const container = {
     display: 'flex',

@@ -1,18 +1,25 @@
 import { dimsumDishes } from './cardInfo'
 import ProductCard from './productContainer'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const CardGrid = () => {
+const CardGrid = ({sendDishes2}) => {
 
     const [dishesAdded, setDishesAdded] = useState([])
-
+    
+    
     const addToCart = (dish) => {
-        setDishesAdded((prevState) => [...prevState, dish])
+        setDishesAdded((prevArray) => [...prevArray, dish])
+        // sendDishes2(dishesAdded)
+        // console.log(dish)
         console.log(dishesAdded)
     }
 
+    useEffect(() => {
+        sendDishes2(dishesAdded)
+    })
+
     let productArray = dimsumDishes.map((dish, index) => (
-        <ProductCard key={index} itemName={dish.name} itemPrice={dish.price} itemImage={dish.source} handleButtonClick={()=> addToCart(dish)}/>
+        <ProductCard key={index} itemName={dish.name} itemPrice={dish.price} itemImage={dish.source} handleButtonClick={()=> addToCart(dish)} />
     ))
 
     return (
@@ -21,6 +28,26 @@ const CardGrid = () => {
         </div>
     )
 }
+
+
+// let newScore = currentScore + 1 
+// setCurrentScore(newScore)
+// setCardsClicked((prevState) => [...prevState, dishName])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const container = {
     padding: '20px',

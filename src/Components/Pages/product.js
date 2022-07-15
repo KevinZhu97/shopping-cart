@@ -1,13 +1,37 @@
 import dimsumBackground from './background-image2.jpg'
 import ProductGrid from '../productGrid'
 
-const Product = () => {
+const Product = ({sendDishes1}) => {
     return (
         <div style={setBackground}>
-            <ProductGrid/>
+            <ProductGrid sendDishes2={sendDishes1}/>
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

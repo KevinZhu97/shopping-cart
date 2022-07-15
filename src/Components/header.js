@@ -18,12 +18,30 @@ const Header = ({cartAmount}) => {
     )
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const navBar = {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '10px 100px',
     color: 'black',
-    backgroundColor: 'white',
+    backgroundColor: '#F6F6F6',
     position: 'relative',
     height: '10vh',
     alignItems: 'center',
