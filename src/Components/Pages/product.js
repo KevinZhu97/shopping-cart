@@ -21,7 +21,6 @@ const setBackground = {
     height: '88vh',
     position: 'relative',
     opacity: '',
-    zIndex: '-2',
 }
 
 export default Product 

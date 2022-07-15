@@ -5,7 +5,7 @@ const Header = ({cartAmount}) => {
 
     return (
         <div style={navBar}>
-            <h1 style={restaurantName}>Dim Sum Sam</h1>
+            <Link to="/" style={link}> <h1 style={restaurantName}>Dim Sum Sam</h1> </Link>
             <div style={navBarButtonContainer}>
                 <Link to="/" style={link}> <h2>Home</h2> </Link>
                 <Link to="/product" style={link}> <h2>Menu</h2> </Link>

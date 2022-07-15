@@ -1,10 +1,11 @@
 import dimsumBackground from './background-image.jpeg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
         <div style={setBackground}>
             <h2 style={homeTitle}>Now breakfast are boring without us.</h2>
-            <button style={homeButton}>Order now</button>
+            <Link to="/product"> <button style={homeButton}>Order now</button> </Link>
             <span style={titleDescription}>the most affordable tasty dim sums are here</span>
         </div>
     )
@@ -37,6 +38,7 @@ const homeButton = {
     color: 'white',
     borderRadius: '30px',
     border: 'none',
+    cursor: 'pointer',
 }
 
 const titleDescription = {

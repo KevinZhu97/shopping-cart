@@ -1,12 +1,12 @@
+import './card.css'
 
-
-const ProductCard = ({itemName, itemPrice, itemImage}) => {
+const ProductCard = ({itemName, itemPrice, itemImage, handleButtonClick}) => {
     return (
-        <div style={container}>
+        <div style={container} className="cardContainer">
             <img style={image} src={itemImage} alt=''/>
             <p style={name}>{itemName}</p>
             <p style={price}>{itemPrice}</p>
-            <button style={button}>Add to Cart</button>
+            <button style={button} onClick={handleButtonClick}>Add to Cart</button>
         </div>
     )
 }
@@ -21,6 +21,8 @@ const container = {
     borderRadius: '10px',
     backgroundColor: 'rgba(255,255,255,0.4)',
     padding: '20px',
+    boxShadow: 'rgb(0 0 0 / 35%) 0px 10px 15px',
+    transition: 'transform 0.3s ease 0s',
 }
 
 const image = {
@@ -39,7 +41,7 @@ const price = {
 }
 
 const button = {
-    
+    cursor: 'pointer',
     border: 'none',
     backgroundColor: 'black',
     color: 'white',

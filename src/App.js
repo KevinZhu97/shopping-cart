@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 function App() {
 
   const [cartQuantity, setCartQuantity] = useState(0)
-
+ 
   return (
     <BrowserRouter>
       <Header cartAmount={cartQuantity}/>
