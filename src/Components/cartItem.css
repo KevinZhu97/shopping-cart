@@ -3,11 +3,13 @@
     display: flex;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
+    background: rgba(255,255,255,0.4)
   }
   
   .cartItem__image {
-    width: 350px;
-    object-fit: contain;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
     border-radius: 10px;
   }
   
@@ -16,12 +18,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--secondary-color);
+    color: gray;
   }
   
   .details__title {
     font-size: 1rem;
     font-weight: bold;
+    color: black;
   }
   
   .details__desc {
@@ -31,6 +34,7 @@
   .details__price {
     font-size: 1rem;
     font-weight: bold;
+    color: black;
   }
   
   .cartItem__actions {
@@ -51,14 +55,15 @@
     margin-left: 0.4rem;
     width: 60px;
     border-radius: 10px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid black;
     outline: none;
+    background: rgba(255,255,255,0.4)
   }
   
   .actions__deleteItemBtn {
     width: 50px;
     height: 50px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid green;
     border-radius: 50%;
     cursor: pointer;
     transition: all ease-in-out 0.7s;

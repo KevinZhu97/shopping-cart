@@ -23,78 +23,78 @@ export const dimsumDishes = [
     {
         "name": "Sticky Rice",
         "source": stickyRice,
-        "price": "$3.95"
+        "price": "3.95"
     },
     {
         "name": "Egg Tarts",
         "source": eggTarts,
-        "price": "$2.95"
+        "price": "2.95"
     },
     {
         "name": "Potstickers",
         "source": potStickers,
-        "price": "$3.95"
+        "price": "3.95"
     },
     {
         "name": "Steamed Pork Ribs",
         "source": steamedPorkRibs,
-        "price": "$4.95"
+        "price": "4.95"
     },
     {
         "name": "Soup Dumplings",
         "source": soupDumplings,
-        "price": "$4.95"
+        "price": "4.95"
     },
     {
         "name": "Beef Tripe",
         "source": beefTripe,
-        "price": "$3.95"
+        "price": "3.95"
     },
     {
         "name": "Pork Rice Noodles",
         "source": porkRiceNoodles,
-        "price": "$2.95"
+        "price": "2.95"
     },
     {
         "name": "Scallion Pancakes",
         "source": scallionPancakes,
-        "price": "$2.95"
+        "price": "2.95"
     },
     {
         "name": "Baked Pork Buns",
         "source": bakedPorkBuns,
-        "price": "$4.95"
+        "price": "4.95"
     },
     {
         "name": "Plain Rice Noodles",
         "source": plainRiceNoodles,
-        "price": "$2.95"
+        "price": "2.95"
     },
     {
         "name": "Turnip Cakes",
         "source": turnipCakes,
-        "price": "$3.95"
+        "price": "3.95"
     },
     {
         "name": "Fried Sesame Balls",
         "source": friedSesameBalls,
-        "price": "$2.95"
+        "price": "2.95"
     },
     {
         "name": "Shrimp Dumplings",
         "source": shrimpDumplings,
-        "price": "$2.95"
+        "price": "2.95"
 
     },
     {
         "name": "Pork Dumplings",
         "source": porkDumplings,
-        "price": "$3.95"
+        "price": "3.95"
     },
     {
         "name": "Chicken Feet",
         "source": chickenFeet,
-        "price": "$3.95"
+        "price": "3.95"
     },
     // {
     //     "name": "Sponge Cake",

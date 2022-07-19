@@ -7,7 +7,7 @@ const ProductCard = ({itemName, itemPrice, itemImage, addToCart, productData}) =
         <div style={container} >
             <img className="Container" style={image} src={itemImage} alt='' />
             <p style={name}>{itemName}</p>
-            <p style={price}>{itemPrice}</p>
+            <p style={price}>${itemPrice}</p>
             <button className="Container" style={button} onClick={()=>addToCart(productData.id)}>Add to Cart</button>
         </div>
     )

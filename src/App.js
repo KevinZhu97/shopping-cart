@@ -2,7 +2,6 @@ import Header from './Components/header'
 import Main from './Components/main'
 import { BrowserRouter } from 'react-router-dom'
 import React, { useState } from 'react';
-import Cart from './Components/cart'
 
 function App() {
 
@@ -18,7 +17,6 @@ function App() {
       <BrowserRouter>
         <Header cartAmount={cartQuantity}/>
         <Main getDishesAdded={getDishesAdded}/>
-        <Cart/>
       </BrowserRouter>
     </div>
   );

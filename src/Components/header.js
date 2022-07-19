@@ -1,4 +1,5 @@
 import steamer from './food-steamer.png'
+import logo from './dim-sum-logo.jpg'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
@@ -34,7 +35,7 @@ const Header = ({ cart }) => {
                 <Link to="/" style={link}> <h2>Home</h2> </Link>
                 <Link to="/product" style={link}> <h2>Menu</h2> </Link>
                 <Link to="/contact" style={link}> <h2>Contact</h2> </Link>
-                <img style={shoppingCart} src={steamer} alt="shopping cart" onClick={changeCartStatus}></img>
+                <Link to="/cart" > <img style={shoppingCart} src={steamer} alt="shopping cart" onClick={changeCartStatus}></img> </Link>
                 <span style={cartStyle}>{cartCount}</span>
             </div>
         </div>
@@ -58,6 +59,11 @@ const navBar = {
     height: '10vh',
     alignItems: 'center',
     borderBottom: '2px double gray'
+}
+
+const logoStyle = {
+    height: '1rem',
+    width: '1rem'
 }
 
 const navBarButtonContainer = {
