@@ -1,7 +1,31 @@
 import steamer from './food-steamer.png'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux'
 
-const Header = ({cartAmount}) => {
+const Header = ({ cart }) => {
+
+
+    //instead of passing cartAmount to header, it will get its own copy from App
+    const [cartCount, setCartCount] = useState(0)
+    const [isCartOpen, setIsCartOpen] = useState(false)
+
+    useEffect(()=> {
+        let count = 0;
+        cart.forEach(item=> {
+            count += item.qty
+        });
+
+        setCartCount(count);
+    }, [cart, cartCount])
+
+    const changeCartStatus = () => {
+        if (!isCartOpen) {
+            setIsCartOpen(true) 
+        } else {
+            setIsCartOpen(false)
+        };
+    }
 
     return (
         <div style={navBar}>
@@ -10,31 +34,19 @@ const Header = ({cartAmount}) => {
                 <Link to="/" style={link}> <h2>Home</h2> </Link>
                 <Link to="/product" style={link}> <h2>Menu</h2> </Link>
                 <Link to="/contact" style={link}> <h2>Contact</h2> </Link>
-                <img style={shoppingCart} src={steamer} alt="shopping cart"></img>
-                <span style={cart}>{cartAmount}</span>
+                <img style={shoppingCart} src={steamer} alt="shopping cart" onClick={changeCartStatus}></img>
+                <span style={cartStyle}>{cartCount}</span>
             </div>
         </div>
         
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const mapStateToProps = state => {
+    return {
+        cart: state.shop.cart
+    }
+}
 
 const navBar = {
     display: 'flex',
@@ -60,7 +72,7 @@ const shoppingCart = {
     width: '2rem'
 }
 
-const cart = {
+const cartStyle = {
     backgroundColor: 'red',
     position: 'absolute',
     right: '95px',
@@ -86,4 +98,4 @@ const link = {
 }
 
 
-export default Header
+export default connect(mapStateToProps)(Header);

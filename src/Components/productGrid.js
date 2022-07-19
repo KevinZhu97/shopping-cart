@@ -1,25 +1,22 @@
-import { dimsumDishes } from './cardInfo'
 import ProductCard from './productContainer'
 import { useEffect, useState } from 'react';
+import { connect } from 'react-redux'
 
-const CardGrid = ({sendDishes2}) => {
+const CardGrid = ({sendDishes2, products}) => {
 
     const [dishesAdded, setDishesAdded] = useState([])
     
     
-    const addToCart = (dish) => {
-        setDishesAdded((prevArray) => [...prevArray, dish])
-        // sendDishes2(dishesAdded)
-        // console.log(dish)
-        console.log(dishesAdded)
-    }
+    // const addToCart = (dish) => {
+    //     setDishesAdded((prevArray) => [...prevArray, dish])
+    // }
 
     useEffect(() => {
         sendDishes2(dishesAdded)
     })
 
-    let productArray = dimsumDishes.map((dish, index) => (
-        <ProductCard key={index} itemName={dish.name} itemPrice={dish.price} itemImage={dish.source} handleButtonClick={()=> addToCart(dish)} />
+    let productArray = products.map((dish) => (
+        <ProductCard key={dish.id} itemName={dish.name} itemPrice={dish.price} itemImage={dish.source} productData={dish}/>
     ))
 
     return (
@@ -29,26 +26,13 @@ const CardGrid = ({sendDishes2}) => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        products: state.shop.products,
+    }
+}
 
-// let newScore = currentScore + 1 
-// setCurrentScore(newScore)
-// setCardsClicked((prevState) => [...prevState, dishName])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 const container = {
     padding: '20px',
     maxWidth: '90vw',
@@ -58,4 +42,4 @@ const container = {
     rowGap: '15px',
 }
 
-export default CardGrid
+export default connect(mapStateToProps)(CardGrid);

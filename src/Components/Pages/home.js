@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../card.css'
 
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div style={setBackground}>
             <h2 style={homeTitle}>Now breakfast are boring without us.</h2>

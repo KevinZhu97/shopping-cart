@@ -9,32 +9,6 @@ const Product = ({sendDishes1}) => {
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const setBackground = {
     display: 'flex',
     justifyContent: 'center',

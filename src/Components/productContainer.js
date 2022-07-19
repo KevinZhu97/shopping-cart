@@ -1,39 +1,23 @@
 import './card.css'
+import { connect } from 'react-redux'
+import { addToCart } from '../redux/Shopping/shopping-actions'
 
-const ProductCard = ({itemName, itemPrice, itemImage, handleButtonClick}) => {
+const ProductCard = ({itemName, itemPrice, itemImage, addToCart, productData}) => {
     return (
-        <div style={container} className="Container">
-            <img style={image} src={itemImage} alt=''/>
+        <div style={container} >
+            <img className="Container" style={image} src={itemImage} alt='' />
             <p style={name}>{itemName}</p>
             <p style={price}>{itemPrice}</p>
-            <button style={button} onClick={handleButtonClick}>Add to Cart</button>
+            <button className="Container" style={button} onClick={()=>addToCart(productData.id)}>Add to Cart</button>
         </div>
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const mapDispatchToProps = dispatch => {
+    return {
+        addToCart: (id) => dispatch(addToCart(id))
+    }
+}
 
 const container = {
     display: 'flex',
@@ -46,13 +30,15 @@ const container = {
     backgroundColor: 'rgba(255,255,255,0.4)',
     padding: '20px',
     boxShadow: 'rgb(0 0 0 / 35%) 0px 10px 15px',
-    transition: 'transform 0.3s ease 0s',
+    
 }
 
 const image = {
     width: '100px',
     height: '100px',
     borderRadius: '10px',
+    marginBottom: '2px',
+    transition: 'transform 0.3s ease 0s',
 }
 
 const name = {
@@ -70,5 +56,6 @@ const button = {
     backgroundColor: 'black',
     color: 'white',
     padding: '5px',
+    transition: 'transform 0.3s ease 0s',
 }
-export default ProductCard
+export default connect(null, mapDispatchToProps)(ProductCard)
