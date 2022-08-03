@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/shopping-cart">
         <Header cartAmount={cartQuantity}/>
         <Main getDishesAdded={getDishesAdded}/>
       </BrowserRouter>
